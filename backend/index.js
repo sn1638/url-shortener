@@ -24,4 +24,4 @@ app.get('/:shortId',async (req,res)=>{
     res.redirect(entry.redirecturl);
 
 })
-app.listen(8000,()=>console.log('server is running on port 8000'))
+app.listen(port,()=>console.log('server is running on port 8000'))
