@@ -23,7 +23,7 @@ export default function URLShortener() {
     try {
       const response = await shortenURL(longURL)
       // Use the backend URL directly for shortened links
-      const backendURL = 'http://localhost:8000'
+      const backendURL = 'https://url-shortener-7-2oor.onrender.com'
       setShortURL(`${backendURL}/${response.id}`)
       setLongURL('')
     } catch (err) {
