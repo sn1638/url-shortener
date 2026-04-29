@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = '/url'
+const API_URL = 'https://url-shortener-7-2oor.onrender.com/url'
 
 export async function shortenURL(longURL) {
   try {
