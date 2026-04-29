@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+dotenv.config();
+const port=process.env.port;
 import express from 'express'
 import dbconnect from './dbconnect.js'
 import { URL } from './models/url.js';
