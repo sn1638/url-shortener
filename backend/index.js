@@ -12,6 +12,9 @@ import cors from 'cors'
 import {router as urlroute} from './router/url.js'
 app.use(cors())
 app.use('/url',urlroute)
+app.get('/test', (req, res) => {
+  res.send("Backend working ✅");
+});
 app.get('/:shortId',async (req,res)=>{
         const shortId=req.params.shortId;
         const entry = await URL.findOneAndUpdate(
