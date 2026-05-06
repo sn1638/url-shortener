@@ -5,12 +5,11 @@ export async function handleshorturl(req,res){
             const body=req.body
             if(!body || !body.url)   return res.status(400).json({error:'url is required'})
             
-            let exists=true;
+            let exist=true;
             let shortId;
-            while (exists) {
+            while (exist) {
                 shortId=shortid.generate()
-                const check = await URL.findOne({ shortId });
-                if (!check) exists = false;
+                exist = await URL.findOne({ shortId });
             }
 
             await URL.create({
